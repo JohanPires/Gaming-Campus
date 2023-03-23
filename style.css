@@ -9,10 +9,12 @@
 
 h1{
     text-transform: uppercase;
+    color: white;
 }
 
 h2{
     text-transform: uppercase;
+    font-size: medium;
 }
 
 button{
@@ -87,6 +89,7 @@ header{
     line-height: 80px;
 }
 
+
 .headercontainer button {
     letter-spacing: 2px;
 }
@@ -102,13 +105,16 @@ header{
 
 .section2{
     background-color: rgb(26, 26, 26);
+    padding: 0 200px;
+    padding: 80px 0;
 }
 
 .logocontainer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 80px 0;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .logocontainer .logo{
@@ -118,6 +124,268 @@ header{
     align-items: center;
 }
 
+.logocontainer h2{
+    color:white;
+}
+
 .logocontainer p{
-    margin: 15px 0;
+    color: white;
+    margin: 30px 0;
+    width: 60%;
+}
+
+.logocontainer img{
+    margin-bottom: 20px;
+}
+
+.section3 {
+    background-color: rgb(246, 243, 243);
+    padding: 80px 0;
+}
+
+.section3 .header{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "h2 button"
+    "p button";
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.section3 .header,
+.section3 .main{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section3 .header h2{
+    text-align: left;
+}
+
+.section3 .header p{
+    grid-area: p;
+    text-align: left;
+}
+
+.section3 .header button{
+    grid-area: button;
+    border: solid rgb(26, 26, 26) 1px;
+    color: rgb(26, 26, 26);
+    margin: auto auto;
+}
+
+.section3 .header button:hover{
+    color: rgb(246, 243, 243);
+    background-color:rgb(26, 26, 26) ;
+}
+
+.section3 .main {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 40px;
+}
+
+.section3 .main .info{
+    text-align: left;
+    position: relative;
+}
+
+.main .info img{
+    margin-bottom: 15px;
+}
+
+.main .info h3{
+    margin-bottom: 15px;
+}
+
+.main .info p{
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.main .info a{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.main .info a:hover{
+    letter-spacing: 2px;
+}
+
+
+.contact{
+    max-width: 1100px;
+    margin: 80px auto;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.contactcontainer{
+    text-align: left;
+}
+
+.contact img{
+    height: 90%;
+    width: 80%;
+}
+
+
+.contactcontainer h2{
+    margin-bottom: 20px;
+}
+
+
+.contactcontainer p{
+    line-height: 25px;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-bottom:30px ;
+}
+
+
+.presse{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.presse .text{
+    text-align: left;
+}
+
+.logo2{
+    place-self: center;
+}
+
+.logo2 img{
+    margin: 0 12px;
+}
+
+footer{
+    background-color: rgb(26, 26, 26) ;
+    padding: 20px 0;
+}
+
+.partenairs{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.partenairs h2{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.partenairs .logo img{
+    margin: 0 10px;
+}
+
+
+@media screen and (max-width:1100px){
+
+
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 700px;
+        margin: 80px auto;
+        gap: 20px;
+    }
+
+    .section3 .main{
+        display: block;
+    }
+    
+    .main .info{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 80px 0;
+        padding-left: 30px;
+        position: relative;
+    }
+    
+    .main .info img{
+        margin: 20px auto;
+    }
+
+    .main .info a{
+        position: absolute;
+        left: 30px;
+        bottom: 0;
+    }
+
+
+}
+
+@media screen and (max-width:900px){
+    nav{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .logocontainer{
+        display: block;
+    }
+
+    .logocontainer .logo{
+        margin: 80px 0;
+    }
+
+    .section3 .header{
+        display: block;
+    }
+
+    .section3 .header h2{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .section3 .header p{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .contact{
+        display: block;
+    }
+
+    .contact img{
+        height: 50%;
+        width: 50%;
+    }
+
+    .contactcontainer{
+        text-align: center;
+        margin: 40px 0 ;
+    }
+
+    .contactcontainer .icon{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav,
+    
+    
+    nav button{
+        height: 0;
+        width: 0;
+        overflow: hidden;
+    }
 }
